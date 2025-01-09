@@ -17,8 +17,7 @@ Your goal is to get the flag from the ADMIN user notes.
 1. Build the android app using Android Studio or ./gradlew assemble or download the pre-built apk
    from the releases.
 2. Install the app on an android emulator or device.
-3. Run the app regularly
-4. Start playing around with another app in the same emulator or with the pc with adb forwarding.
+3. Run the app regularly and the server will be started.
 
 ## Given details:
 
@@ -26,11 +25,14 @@ Your goal is to get the flag from the ADMIN user notes.
 2. It can be solved.
 
 ## Common setup problems:
+
 1. Make sure you change the cmake version in the ./app/build.gradle to the one you have installed.
 2. You can run logcat to see the logs of the app, also you can run `netstat -ate` to check if the
    server is running.
-3. I have tested the challenge on a Samsung Galaxy S8+ Android 9 real device. If the challenge doesn't work on
-   your device please let me know.
+3. I have tested the challenge on a Samsung Galaxy S8+ Android 9 real device. If the challenge
+   doesn't work on
+   your device please let me know. **UPDATE**: I have tested the challenge on a Pixel 39 Android 14
+   emulator and it's fine.
 
 ## Contact:
 
