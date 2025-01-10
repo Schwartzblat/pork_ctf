@@ -175,47 +175,46 @@ void get_note_action(int sock) {
 }
 
 void *handle_client(int sock) {
-    // Read message type:
-    uint8_t buffer;
-    if (recv(sock, &buffer, 1, 0) == -1) {
-        close_socket_and_send(sock, "Failed to receive message type");
-    }
-    switch (buffer) {
-        case LOGIN:
-            login(sock);
-            break;
-        case LOGOUT:
-            logout();
-            break;
-        case CHANGE_PASSWORD:
-            change_password(sock);
-            break;
-        case CREATE_NOTE:
-            create_note_action(sock);
-            break;
-        case DELETE_NOTE:
-            delete_note_action(sock);
-            break;
-        case GET_NOTE:
-            get_note_action(sock);
-            break;
-            // Let the client decide how to optimize the connection:
-        case MOVE_TO_THREAD:
-            // Move the connection to a new thread
-            pthread_t thread;
-            pthread_create(&thread, nullptr, reinterpret_cast<thread_func_t>(handle_client),
-                           reinterpret_cast<void *>(sock));
-            // The current thread will exit
-            pthread_exit(nullptr);
-            break;
-        case DISCONNECT:
-            close(sock);
-            return nullptr;
-        default:
-            socket_send(sock, "Invalid message type");
-    }
-    if (sock != -1) {
-        return handle_client(sock);
+    while (sock != -1) {
+        // Read message type:
+        uint8_t buffer;
+        if (recv(sock, &buffer, 1, 0) == -1) {
+            close_socket_and_send(sock, "Failed to receive message type");
+        }
+        switch (buffer) {
+            case LOGIN:
+                login(sock);
+                break;
+            case LOGOUT:
+                logout();
+                break;
+            case CHANGE_PASSWORD:
+                change_password(sock);
+                break;
+            case CREATE_NOTE:
+                create_note_action(sock);
+                break;
+            case DELETE_NOTE:
+                delete_note_action(sock);
+                break;
+            case GET_NOTE:
+                get_note_action(sock);
+                break;
+                // Let the client decide how to optimize the connection:
+            case MOVE_TO_THREAD:
+                // Move the connection to a new thread
+                pthread_t thread;
+                pthread_create(&thread, nullptr, reinterpret_cast<thread_func_t>(handle_client),
+                               reinterpret_cast<void *>(sock));
+                // The current thread will exit
+                pthread_exit(nullptr);
+                break;
+            case DISCONNECT:
+                close(sock);
+                return nullptr;
+            default:
+                socket_send(sock, "Invalid message type");
+        }
     }
     return nullptr;
 }
