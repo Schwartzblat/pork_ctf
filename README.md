@@ -34,9 +34,13 @@ Your goal is to get the flag from the ADMIN user notes.
    your device please let me know. **UPDATE**: I have tested the challenge on a Pixel 39 Android 14
    emulator and it's fine.
 
-
 ## Solvers:
-Currently, there are no solvers, so you can still be the first one!
+
+First solver is here!
+
+| Name |       GMT        |
+|:----:|:----------------:|
+|  YL  | 11.1.2025, 10:08 |
 
 ## Contact:
 
