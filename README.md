@@ -36,12 +36,10 @@ Your goal is to get the flag from the ADMIN user notes.
 
 ## Solvers:
 
-First solver is here!
-
-|   Name    |       GMT        |
-|:---------:|:----------------:|
-|    YL     | 11.1.2025, 10:08 |
-| Ed Lustig | 12.1.2025, 9:03  |
+|                 Name                 |       GMT        |
+|:------------------------------------:|:----------------:|
+|                  YL                  | 11.1.2025, 10:08 |
+| [Ed Lustig](https://linktr.ee/DTR4K) | 12.1.2025, 9:03  |
 
 ## Contact:
 
