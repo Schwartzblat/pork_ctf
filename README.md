@@ -38,9 +38,10 @@ Your goal is to get the flag from the ADMIN user notes.
 
 First solver is here!
 
-| Name |       GMT        |
-|:----:|:----------------:|
-|  YL  | 11.1.2025, 10:08 |
+|   Name    |       GMT        |
+|:---------:|:----------------:|
+|    YL     | 11.1.2025, 10:08 |
+| Ed Lustig | 12.1.2025, 9:03  |
 
 ## Contact:
 
