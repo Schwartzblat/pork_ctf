@@ -41,6 +41,11 @@ Your goal is to get the flag from the ADMIN user notes.
 |                  YL                  | 11.1.2025, 10:08 |
 | [Ed Lustig](https://linktr.ee/DTR4K) | 12.1.2025, 9:03  |
 
+## Writeups:
+
+Here is my own writeup for the challenge:
+[My Writeup](https://schwartzblat.github.io/posts/pork-ctf-writeup/)
+
 ## Contact:
 
 Having a problem with the challenge?
